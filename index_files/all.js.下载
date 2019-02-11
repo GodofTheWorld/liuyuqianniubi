@@ -1,0 +1,77 @@
+$(function () {
+
+	//显示隐藏手机端菜单
+	$('.mobileMenu').html($(".categoryList").html());
+	$(".categoryListBtn").click(function () {
+		$("html, body").scrollTop(0);
+		if ($('.mobileMenu').hasClass('show')) {
+			$('.mobileMenu').removeClass('show');
+		} else {
+			$('.mobileMenu').addClass('show');
+		}
+
+	});
+
+	//底部菜单显示
+	(function () {
+		$('.friendLink span').html($(".categoryList").html());
+	})();
+
+	//回顶部
+	$(".goTopBtn").click(function () {
+		$("html, body").scrollTop(0);
+	});
+
+
+	//图片懒加载
+	(function () {
+		$("img.lazy").lazyload({effect: "fadeIn"});
+	})();
+
+	//当前分类变色提示
+	(function () {
+		var cid = $(".cid").val();
+		if (cid != undefined) {
+			$(".categoryList .son").each(function () {
+				currentcid = $(this).data('cid');
+				if (cid == currentcid) {
+					$(this).addClass('current');
+				}
+			});
+		}
+
+	})();
+
+	//列表页 保持图片宽高比率
+	(function () {
+		var bv = 16 / 9;
+		var w = $(".list .item .wrap").width();
+		var h = w / bv;
+		$(".list .item .wrap .tn").width(w);
+		$(".list .item .wrap .tn").height(h);
+		$(window).resize(function () {
+			var w = $(".list .item .wrap").width();
+			var h = w / bv;
+			$(".list .item .wrap .tn").width(w);
+			$(".list .item .wrap .tn").height(h);
+		});
+	})();
+
+	//检测激活网址
+	(function () {
+		var d= new Date();
+		$.getJSON("/data/json/activeDomain.json?r="+d.getHours(), function (json) {
+			var p = 0;
+			var domain = document.domain;
+			var len = json.length;
+			for (var i = 0; i < len; i++) {
+				if (domain == json[i]) {
+					p = 1;
+				}
+			}
+			if (p == 0) {
+				window.location.href = '/404.php?action=noUse&url=' + domain;
+			}
+		});
+	})();
+});

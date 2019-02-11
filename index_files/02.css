@@ -1,0 +1,114 @@
+/*全局*/
+html body {padding: 0; margin: 0; text-align: center; font-size: 15px; background: #fff; color: #333}
+div {text-align: left;}
+a { color: #333;text-decoration: none;}
+a:hover {text-decoration: none;}
+.container {width: 100%; margin: auto;}
+.float-left {float: left !important;}
+.float-right {float: right !important;}
+.clearfix {clear: both; display: block;}
+.ctips { background: #666; color: #fff; padding: 1px 6px; border-radius: 10px; font-size: 12px; vertical-align: super;display: inline-block; margin: auto auto auto 5px;}
+.btn {cursor: pointer; padding: 1px 3px 1px 6px; margin-right: 5px; border: 0px; font-size: 15px; color: #222!important; font-weight: bold;}
+hr {height: 0px; margin: 0px;border: 0px; border-bottom: 1px solid #ddd;}
+.errorReport { margin: 20px auto; padding: 40px 5px; text-align: center; background: #000; border-radius: 8px}
+.current {font-weight: bold; color: #46b8da !important;}
+/*****顶部*****/
+header {position: fixed; height: 40px; left: 0; z-index: 999; width: 100%; border: 0; background: #222;}
+header .share {margin: auto 5px auto auto; line-height: 40px; text-align: center; font-size: 15px; display: inline-block}
+header .share span { line-height: 30px; padding: 0px 8px; display: inline-block;}
+header .share .sharebtn { cursor: pointer; font-weight: bold; color: #fff3cd;}
+header ul {height: 40px; list-style: none; padding: 0px;margin: 0px 8px 0px 0px;}
+header ul li {float: left; font-weight: bold; line-height: 40px;}
+header ul .categoryListBtn {line-height: 40px; font-size: 36px; color: #eee; display: inline-block; cursor: pointer; padding: 0px 5px}
+header ul .vipBtn {line-height: 40px; font-size: 15px; color: #FF3E96; display: inline-block; padding: 0px 8px}
+header ul .findUrlBtn {line-height: 40px; color: #fff3cd; display: block; padding: 0px 8px; font-size: 15px;}
+header ul .qqun {text-align: center;}
+header ul .qqun a {padding: 5px 8px;line-height: 30px; color: #fff3cd; display: inline-block;}
+/*mobileMenu*/
+.mobileMenu {position: absolute; z-index: 999; top: 40px;left: -100%; background: #eee; margin-bottom: 8px; width: 100%; transition: all 0.2s ease;}
+.mobileMenu.show {left: 0;}
+.mobileMenu .parent { display: block; padding: 5px 8px 0px 0px; margin: 8px 8px 8px 15px; color: #999;}
+.mobileMenu .son { display: inline-block; padding: 0px 8px 10px 0px; margin: 2px 8px 2px 15px; color: #FF3E96;}
+.height50 {height: 50px;}
+/*首页列表*/
+.indexTitle {padding: 12px 12px; font-weight: bold; color: #FF3E96;font-size: 14px;background: #eee; margin-top: 20px;}
+.indexTitle i {font-size: 14px}
+.indexTitle .categoryListBtn {cursor: pointer;}
+/*list*/
+article.list { padding: 4px 4px;}
+article.list .nav {color: #333; padding: 5px 12px; border-bottom: 1px solid #eee; margin-bottom: 15px;}
+article.list .nav a {color: #eee}
+article.list .item { display: inline-block; width: 50%; margin-bottom: 8px}
+article.list .item .wrap {margin: 4px 4px; position: relative;}
+article.list .item .wrap .tn {overflow: hidden;}
+article.list .item .wrap .tn img { width: 100%;}
+article.list .item .wrap h3 {font-weight: normal; line-height: 35px; font-size: 15px;margin: 0px;overflow: hidden;white-space: nowrap; text-overflow: ellipsis;}
+article.list .meta {height: 15px;font-size: 12px; text-align: center; color: #666}
+article.list .meta i { color: #FF3E96; font-size: 14px}
+article.list .tuItem {display: block; border-bottom: 1px solid #eee; padding: 15px 0px;}
+article.list .tuItem .title {padding-left: 4px; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;}
+article.list .tuItem .meta {text-align: right; padding-right: 15px}
+article.list .tuItem img {width: 100%;}
+article.list .downList {}
+article.list .downList .title {font-size: 18px; text-align: center; background: #eee; padding: 5px 3px;}
+article.list .downList .content img { width: 100%; max-width: 650px}
+article.list .downList .time {font-size: 12px; color: #ccc;text-align: center; }
+article.list .downList .t {color: #fff; font-weight: bold;text-align: center; }
+article.list .downList .downUrlShow {margin-bottom: 35px; text-align: center;}
+article.list .downList .downUrlShow a {width: 100%; max-width: 620px; display: inline-block; line-height: 35px; background: #eee; border-radius: 8px; margin-bottom: 5px;}
+article.list .nsItem { display: block; padding: 15px 8px; border-bottom: 1px solid #eee;}
+article.list .nsItem .title {}
+article.list .nsItem .meta { text-align: right !important;}
+/*侧边*/
+aside {width: 18%; display: none; }
+aside .categoryList {padding: 2px 15px; border-left: 1px solid #eee}
+aside .categoryList .parent {display: block; background: #eee; font-weight: bold; padding: 5px 8px; margin-top: 5px; cursor: default}
+aside .categoryList .son {display: block; background: #fff; font-size: 14px; color: #FF3E96; padding: 5px 0px 5px 18px;border-bottom: 1px solid #eee;}
+/*分页*/
+article.list .pages {list-style: none; text-align: center; margin: 20px 0px 15px 0px; padding: 0px}
+article.list .pages li { display: inline-block; background: #eee; margin: 1px;}
+article.list .pages li a {display: block; line-height: 40px; padding: 0px 15px;}
+article.list .pages li .active {background: #ccc; color: #FF3E96}
+/*thread*/
+article.thread { float: left; width: 100%; max-width: 800px; line-height: 175%}
+article.thread .title {font-size: 24px; line-height: 2.8rem; text-align: center;}
+article.thread .other {font-size: .8rem; color: #666; text-align: center;}
+article.thread .content {position: relative;}
+article.thread .content img { position: relative; overflow: hidden; display: block; margin: 20px auto; width: 100%; max-width: 600px;}
+article.thread .lastThreadsList { margin: 20px auto; border-top: 1px solid #ccc; padding: 8px 8px}
+article.thread .lastThreadsList .t { font-weight: bold;}
+article.thread .lastThreadsList a { overflow: hidden;white-space: nowrap;}
+/*friendLink*/
+.friendLink {margin-top: 40px; padding: 8px 8px; background: #666;}
+.friendLink .parent { font-weight: bold; margin-top: 10px; color: #46b8da}
+.friendLink .ctips {display: none;}
+.friendLink hr {display: none;}
+.friendLink a { display: inline-block; margin: 3px auto; color: #fff3cd; padding: 3px 0px; width: 30%;}
+footer { background: #000; font-size: 12px; text-align: center; color: #666; padding: 25px 8px; line-height: 175%;}
+
+
+/*手机*/
+@media screen and (max-width: 767px) {
+	header .share .text {display: none}
+	header .share .sharebtn { }
+}
+/*平板*/
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	article.list .item { display: inline-block; width: 33%;}
+	.friendLink a { width: 20%;}
+}
+/*笔记本*/
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+	aside {display: block}
+	article.list { width: 81%; float: left;}
+	article.list .item { display: inline-block; width: 33%;}
+	.friendLink a { width: 10%;}
+}
+/*电脑*/
+@media screen and (min-width: 1200px) {
+	.container { width: 1200px;}
+	article.list { width: 81%; float: left;}
+	article.list .item { display: inline-block; width: 25%;}
+	aside {display: block}
+	.friendLink a { width: 10%;}
+}
